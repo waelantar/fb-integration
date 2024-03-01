@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1"/>
+    <title>FaceBook-Connect</title>
+</head>
+<body>
+<h1>
+    Hello , <span th:text="${profileName}"></span>!
+</h1>
+<h4>Here is your comment:</h4>
+
+<div>
+    <h1>Comments</h1>
+    <ul>
+        <li th:each="comment : ${comments}">
+            <span th:text="${comment.id}"></span>: <span th:text="${comment.message}"></span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
